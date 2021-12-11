@@ -6,21 +6,21 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <base id="base" href="https://notes.blog.wdja.net/pages/" />
     <link href="../support/global/common/upload/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <title>子分类_专题页面_WDJA博客内容管理系统</title>
+    <title>多级页面_WDJA博客内容管理系统</title>
     <meta name="keywords" content="关键字" />
     <meta name="description" content="描述" />
-    <link href="https://notes.blog.wdja.net/common/images/theme/notes/css/style.css?zP8" type="text/css" rel="stylesheet" />
-    <link href="https://notes.blog.wdja.net/common/images/theme/notes/font-awesome/4.7.0/css/font-awesome.min.css?zP8" type="text/css" rel="stylesheet" />
-    <link href="https://notes.blog.wdja.net/common/images/theme/notes/fancybox/4.0.9/fancybox.css?zP8" type="text/css" rel="stylesheet" />
+    <link href="https://notes.blog.wdja.net/common/images/theme/notes/css/style.css?zyF" type="text/css" rel="stylesheet" />
+    <link href="https://notes.blog.wdja.net/common/images/theme/notes/font-awesome/4.7.0/css/font-awesome.min.css?zyF" type="text/css" rel="stylesheet" />
+    <link href="https://notes.blog.wdja.net/common/images/theme/notes/fancybox/4.0.9/fancybox.css?zyF" type="text/css" rel="stylesheet" />
     <!--[if lt IE 9]>
     <script src="https://notes.blog.wdja.net/common/images/js/html5.js" type="text/javascript"></script>
     <script src="https://notes.blog.wdja.net/common/images/js/css3-mediaqueries.js" type="text/javascript"></script>
     <![endif]-->
     <script src='https://notes.blog.wdja.net/common/images/theme/notes/fancybox/4.0.9/fancybox.min.js' type="text/javascript"></script>
     <script src='https://notes.blog.wdja.net/common/images/theme/notes/js/jquery.min.js' type="text/javascript"></script>
-    <link href="../common/editor/tinymce5/prism.css?zP8" type="text/css" rel="stylesheet" />
-    <script src="../common/editor/tinymce5/prism.js?zP8" type="text/javascript"></script>
-    <link href="https://notes.blog.wdja.net/common/images/js/viewer/viewer.min.css?zP8" type="text/css" rel="stylesheet" />
+    <link href="../common/editor/tinymce5/prism.css?zyF" type="text/css" rel="stylesheet" />
+    <script src="../common/editor/tinymce5/prism.js?zyF" type="text/javascript"></script>
+    <link href="https://notes.blog.wdja.net/common/images/js/viewer/viewer.min.css?zyF" type="text/css" rel="stylesheet" />
     <script src="https://notes.blog.wdja.net/common/images/js/viewer/viewer.min.js" type="text/javascript"></script>
     
   </head>
@@ -160,7 +160,7 @@
             <script type="text/javascript"> 
               function reset() 
               { 
-                var e=document.getElementById("post-3"); 
+                var e=document.getElementById("post-{$id}"); 
                 var con=e.innerHTML; 
                 con = con.replace(/[ \t]*height[ \t]*=[ \t]*("[^"]+")|('[^']+')/ig,""); 
                 con = con.replace(/[ \t]*height[ \t]*=[ \t]*[^ \t]+/ig,"");
@@ -171,48 +171,59 @@
               }
               //window.onload = reset;
             </script>
-            <article id="post-3" class="post post-type-normal" style="opacity: 1; display: block; transform: translateY(0px);">
+            <article id="post-{$id}" class="post post-type-normal" style="opacity: 1; display: block; transform: translateY(0px);">
               <header class="post-header">
-                <h1 class="post-title" itemprop="name headline">子分类</h1>
-                <div class="post-meta">
-                  <span class="post-time">
-                    <span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span>
-                    <span class="post-meta-item-text">发表于</span><time title="创建于" itemprop="dateCreated datePublished">2021-12-10</time>
-                  </span>
-                  <span id="/2016/next-documentations-reload/" class="leancloud_visitors" data-flag-title="NexT Documentations Reload">
-                    <span class="post-meta-divider">|</span>
-                    <span class="post-meta-item-icon"><i class="fa fa-eye"></i></span>
-                    <span class="post-meta-item-text">点击</span>
-                    <span class="leancloud-visitors-count">3</span>
-                  </span>
-                </div>
+                <h1 class="post-title">子分类</h1>
               </header>
-              <div class="post-body" itemprop="articleBody">
-                
-                <p>子<a href="https://notes.blog.wdja.net/tags/detail-1.html">分类</a></p>
-                <div id="ct-cutepage" class="cutepage"></div>
-              </div>
-              <footer class="post-footer">
-                <div class="post-tags"></div>
-                <div class="post-nav">
-                  <div class="post-nav-next post-nav-item">
-                    
-<a href="detail-4.html" rel="prev"><span class="meta-nav"><span class="post-nav"><i class="iconfont icon-chevronleft"></i>上一篇：</span><br/>孙内容</span></a>
-
-                  </div>
-                  <span class="post-nav-divider"></span>
-                  <div class="post-nav-prev post-nav-item">
-                    
-<a href="detail-2.html" rel="prev"><span class="meta-nav"><span class="post-nav"><i class="iconfont icon-chevronright"></i>下一篇：</span><br/>内容</span></a>
-
-                  </div>
-                </div>
-              </footer>
+            </article>
+            <div class="clear"></div>
+          </section>
+          <section id="posts" class="posts-collapse">
+            <div id="list_fields" style="display:none;">
+              <ul>
+                <li>
+                  <span>类别</span>
+                  
+                </li>
+              </ul>
+            </div>
+            
+            
+            <article class="post post-type-normal" style="opacity: 1; display: block; transform: translateY(0px);">
+              <header class="post-header">
+                <h1 class="post-title"><a class="post-title-link" href="detail-4.html"><span itemprop="name">孙内容</span></a></h1>
+                <div class="post-meta"><time class="post-time">12-10</time></div>
+              </header>
             </article>
             
-            
-  <div class="clear"></div>
           </section>
+          <nav class="pagination">
+            
+            <style type="text/css">
+                #cutepage {
+                    text-align: center;
+                }
+                #cutepage a {
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 14px;
+                    font-family: Tahoma;
+                    background: #F8F8F8;
+                    margin: 0 5px;
+                    border: 1px solid #DDD;
+                    border-radius: 4px;
+                }
+                #cutepage a.np-page {width: 70px}
+                #cutepage a.current, #cutepage a:hover {
+                    background: #DDD;
+                    text-decoration: none;
+                }
+            </style>
+            <a class="current" href="list-0.html">1</a>
+        
+          </nav>      
         </div>
       </div>
     </div>
@@ -245,4 +256,4 @@
 
 </body>
 </html>
-<!--WDJA(1.0), Processed in 186.000 ms-->
+<!--WDJA(1.0), Processed in 193.000 ms-->
