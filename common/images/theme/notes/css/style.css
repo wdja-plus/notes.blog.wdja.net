@@ -407,7 +407,7 @@ caption,
 th,
 td {
   padding: 8px;
-  text-align: left;
+  /*text-align: left;*/
   vertical-align: middle;
   font-weight: normal;
 }
@@ -422,6 +422,15 @@ th {
 }
 td {
   border-bottom-width: 1px;
+}
+table.nocolor,
+table.nocolor tr,
+table.nocolor tr th,
+table.nocolor tr td
+{
+    background-color:transparent !important;
+    border-color:transparent !important;
+    text-align:normal !important;
 }
 html,
 body {
@@ -1091,6 +1100,9 @@ pre .javascript .function {
 .post-body {
   font-family: 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
+.post-body .cutepage{
+    text-align:center;
+}
 @media (max-width: 767px) {
   .post-body {
     word-break: break-word;
@@ -1304,6 +1316,7 @@ pre .javascript .function {
   display: none;
 }
 .posts-expand .post-title {
+  margin: 20px auto;
   font-size: 26px;
   text-align: center;
   word-break: break-word;
@@ -1441,9 +1454,11 @@ pre .javascript .function {
   text-align: center;
 }
 .posts-expand .post-tags a {
-  display: inline-block;
-  margin-right: 10px;
-  font-size: 13px;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 13px;
+    vertical-align: middle;
+    line-height: 1;
 }
 .post-nav {
   display: table;
@@ -2628,7 +2643,7 @@ margin: 5px 0 0;
   position: absolute;
   top: 0;
   overflow: hidden;
-  padding: 0;
+  padding: 0 0 20px 0;
   width: 240px;
   box-shadow: initial;
   border-radius: initial;

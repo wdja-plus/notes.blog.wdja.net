@@ -9,6 +9,21 @@ else if (document.all)
 else if (document.layers)
 { client_test = "c"; }
 
+if(!window.localStorage){
+    alert("浏览器不支持localstorage");
+    console.log('Web storage is not supported..');
+}else{
+    var utils = {
+        setParam : function (name,value){
+            localStorage.setItem(name,value);
+        },getParam : function(name){
+            return localStorage.getItem(name)
+        },delParam:function(name){
+            return localStorage.removeItem(name)
+        }
+    }
+}
+
 var request = new function()
 {
   var iname,ivalue,icount;
@@ -115,7 +130,7 @@ function get_sel_id(obj)
       if (frm.sel_id.checked) sel_ids = frm.sel_id.value;
     }
   }
-  if(obj == 'buy') localStorage.setItem('WdjaBuy',sel_ids);
+  if(obj == 'buy') utils.setParam('WdjaBuy',sel_ids);
   document.sel_form.sel_ids.value = sel_ids;
 }
 

@@ -8,8 +8,8 @@
         strong[0].className = "show";
         for(var j = 0; j < option.length; j++){
           var idvalue = option[j].getAttribute("id").split("|");
-          document.getElementById(idvalue[0]).value = localStorage.getItem(genre + '_' + idvalue[0]);
-          if(localStorage.getItem(genre + '_' + idvalue[0])==idvalue[1]){
+          document.getElementById(idvalue[0]).value = utils.getParam(genre + '_' + idvalue[0]);
+          if(utils.getParam(genre + '_' + idvalue[0])==idvalue[1]){
             option[j].className = "show";
             strong[0].className = "";
           }
@@ -22,7 +22,7 @@
           a[i].className = "";
           var idvalue = a[i].getAttribute("id").split("|");
           document.getElementById(idvalue[0]).value = 0;
-          localStorage.removeItem(genre + '_' + idvalue[0]);
+          utils.delParam(genre + '_' + idvalue[0]);
         }
         document.getElementById("filterForm").submit();
       }
@@ -45,7 +45,7 @@
               for(var i = 0; i < option.length; i++){
                 option[i].className = "";
                 var idvalue = option[i].getAttribute("id").split("|");
-                localStorage.removeItem(genre + '_' + idvalue[0]);
+                utils.delParam(genre + '_' + idvalue[0]);
               }
               this.className = "show";
               var span = ids[index];
@@ -56,7 +56,7 @@
                 return;
               }
               var idvalue = this.getAttribute("id").split("|");
-              localStorage.setItem(genre + '_' + idvalue[0],idvalue[1]);
+              utils.setParam(genre + '_' + idvalue[0],idvalue[1]);
               document.getElementById(idvalue[0]).value = idvalue[1];
               document.getElementById("filterForm").submit();
             };
@@ -71,7 +71,7 @@ function GetRequest() {
       var str = url.substr(1);
       strs = str.split("&");
       for(var i = 0; i < strs.length; i ++) {
-          if(strs[i].split("=")[0] != 'type') localStorage.setItem(genre + '_' + strs[i].split("=")[0],unescape(strs[i].split("=")[1]));
+          if(strs[i].split("=")[0] != 'type') utils.setParam(genre + '_' + strs[i].split("=")[0],unescape(strs[i].split("=")[1]));
       }
    }
 }
