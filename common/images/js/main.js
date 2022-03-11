@@ -388,33 +388,6 @@ function select_alls()
    }
 }
 
-function changeAddress(id){
-get_id('name').value = '';
-get_id('address').value = '';
-get_id('code').value = '';
-get_id('phone').value = '';
-get_id('email').value = '';
-if(id != 0){
-  var domain = document.domain;
-  var port = window.location.port;
-  var url = '//'+domain+':'+port+'/user/address/api.php?id=' + id;
-  var ajax = createXMLHttpRequest();
-  ajax.open('get',url);
-  ajax.send(null);
-  ajax.onreadystatechange = function () {
-     if (ajax.readyState==4 &&ajax.status==200) {
-       //console.log(ajax.responseText);
-          var rtext = JSON.parse(ajax.responseText);
-          get_id('name').value = rtext['name'];
-          get_id('address').value = rtext['address'];
-          get_id('code').value = rtext['code'];
-          get_id('phone').value = rtext['phone'];
-          get_id('email').value = rtext['email'];
-      }
-  }
-}
-}
-
 function createXMLHttpRequest() {
         var xmlHttp;
         try{
